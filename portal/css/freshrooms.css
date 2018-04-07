@@ -1,0 +1,21 @@
+.container{
+	margin:30px;	
+}
+
+.row{
+	margin-bottom:10px;
+}
+
+.label-text{
+	font-size:13;
+	font-weight: bold;
+}
+
+.header {
+	 width:100%;
+	 height:120px;
+	 text-align:center;
+}
+	  
+	  
+	  

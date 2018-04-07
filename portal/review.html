@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+			apiKey: "AIzaSyDWVTYwwhaWAs3vSlcZ02886QnOpaWFHpE",
+			authDomain: "washroomfinder-80159.firebaseapp.com",
+			databaseURL: "https://washroomfinder-80159.firebaseio.com",
+			projectId: "washroomfinder-80159",
+			storageBucket: "washroomfinder-80159.appspot.com",
+			messagingSenderId: "481533217344"
+		  };
+        firebase.initializeApp(config);
+    </script>
+    <script src="js/freshrooms.js"></script>
+	<link href="css/freshrooms.css" rel="stylesheet">
+</head>
+
+<body class="container">
+	<div class="header">
+		<img style='height: 100%; width: 100%; object-fit: contain' src="images/banner.png"/>
+	</div>
+    <fieldset>
+        <legend>Property Information:</legend>
+        <div id="container">
+            <div class="row">
+                <span class="col-md-2 label-text">Property</span>
+                <span class="col-md-4">
+					<input type="text" class="form-control" id="propertyName">
+					<input type="hidden" class="form-control" id="propertyId">
+				</span>
+            </div>
+			<div class="row">
+                <span class="col-md-2 label-text">User</span>
+                <span class="col-md-4"><input type="text" class="form-control" id="user"></span>
+            </div>
+    </fieldset>
+    <fieldset>
+        <legend>Rating Information:</legend>
+		<div class="row">
+			<span class="col-md-2 label-text">Clean</span>
+			<span class="col-md-4"><input type="text" class="form-control col-md-4" id="clean"></span>
+		</div>
+		<div class="row">
+			<span class="col-md-2 label-text">Infrastructure</span>
+			<span class="col-md-4"><input type="text" class="form-control col-md-4" id="infrastructure"></span>
+		</div>
+		<div class="row">
+			<span class="col-md-2 label-text">Safety</span>
+			<span class="col-md-4"><input type="text" class="form-control col-md-4" id="safety"></span>
+		</div>
+		<div class="row">
+			<span class="col-md-2 label-text">Overall</span>
+			<span class="col-md-4"><input type="text" class="form-control col-md-4" id="overall"></span>
+		</div>
+    </fieldset>
+    <button id="saveNewReview" class="btn btn-default">Save</button>
+    </div>
+</body>
+
+</html>

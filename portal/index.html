@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+			apiKey: "AIzaSyDWVTYwwhaWAs3vSlcZ02886QnOpaWFHpE",
+			authDomain: "washroomfinder-80159.firebaseapp.com",
+			databaseURL: "https://washroomfinder-80159.firebaseio.com",
+			projectId: "washroomfinder-80159",
+			storageBucket: "washroomfinder-80159.appspot.com",
+			messagingSenderId: "481533217344"
+		  };
+        firebase.initializeApp(config);
+    </script>
+    <script src="js/freshrooms.js"></script>
+	<link href="css/freshrooms.css" rel="stylesheet">
+</head>
+
+<body class="container">
+	<div class="header">
+		<img style='height: 100%; width: 100%; object-fit: contain' src="images/banner.png"/>
+	</div>
+    <fieldset>
+        <legend>Owner Information:</legend>
+        <div id="container">
+            <div class="row">
+                <span class="col-md-2 label-text">Name</span>
+                <span class="col-md-4"><input type="text" class="form-control" id="name"></span>
+            </div>
+            <div class="row">
+                <span class="col-md-2 label-text">Address</span>
+                <span class="col-md-4"><input type="text" class="form-control col-md-4" id="address"></span>
+            </div>
+            <div class="row">
+                <span class="col-md-2 label-text">Email Id</span>
+                <span class="col-md-4"><input type="text" class="form-control col-md-4" id="emailId"></span>
+            </div>
+            <div class="row">
+                <span class="col-md-2 label-text">Marketing</span>
+                <span class="col-md-4"><input type="text" class="form-control col-md-4" id="marketing"></span>
+            </div>
+            <div class="row">
+                <span class="col-md-2 label-text">ImageUrl</span>
+                <span class="col-md-4"><input type="text" class="form-control col-md-4" id="imageUrl"></span>
+            </div>	
+			<div class="row">
+                <span class="col-md-2 label-text">Services</span>
+                <span class="col-md-4"><input type="text" class="form-control col-md-4" id="services"></span>
+            </div>	
+			<div class="row">
+				<span class="col-md-2 label-text">Type</span>
+				<span class="col-md-4">
+					<label class="radio-inline"><input type="radio" name="paymentType" value="free">Free</label>
+					<label class="radio-inline"><input type="radio" name="paymentType" value="paid">Paid</label>
+				</span>
+			</div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Location Information:</legend>
+		<div class="row">
+			<span class="col-md-2 label-text">Latitude</span>
+			<span class="col-md-4"><input type="text" class="form-control col-md-4" id="latitude"></span>
+		</div>
+		<div class="row">
+			<span class="col-md-2 label-text">Longitude</span>
+			<span class="col-md-4"><input type="text" class="form-control col-md-4" id="longitude"></span>
+		</div>
+    </fieldset>
+    <button id="saveNewProperty" class="btn btn-default">Save</button>
+    </div>
+</body>
+
+</html>
